@@ -10,28 +10,18 @@
 
 	//HEADER
 
-.header
-	margin-bottom: 35px
-	font:
-		size: 0
-	background: #edeff3
-.logo__wrap
+.logo
 	height: 142px 
 	float: left
 	padding-top: 20px
-		
-.header__row
+
+.work-time
 	display: inline-block
-	padding-left: 28px 
-	vertical-align: top 
-	line-height: 70px 		
-	.header__row-border-bottom
-		border-bottom: 1px solid #ccc  
-.header__work-time
-	display: inline-block
-	width: 186px
-	margin-right: 50px 
-	.header__time-work
+	width: 100px
+	margin-right: 50px
+	 
+.time-work
+	span
 		display: inline-block
 		margin-right: 15px 
 		color: #cccccc 
@@ -39,8 +29,6 @@
 		list-height: 46px
 	ul
 		display: inline-block
-		font-size: 0
-		list-style: none 
 		li
 			display: inline-block
 			width: 11px
@@ -52,78 +40,53 @@
 		li:last-child
 			margin-right: 0					
 		.inactive
-			background: #d0d5e0 								
-.header__callback
-	display: inline-block
-	margin-right: 45px 
-	background: #fff
-	.callback-btn
-		display: block
-		position: relative
-		padding-right: 16px
-		padding-left: 41px 
-		color: #1165ab 
-		font: 
-			size: 13px
-			weight: bold  
-		text-transform: uppercase
-		text-decoration: none 
-		letter-spacing: 1px 
-		line-height: 42px 
-		background: inherit
-		-webkit-border-radius: 3px 
-			border-radius: 3px 
-		-webkit-box-shadow: 0 2px 3px 1px #88a9e2 
-			box-shadow: 0 2px 3px 1px #88a9e2 			
-		&:before
-			content: ""
-			position: absolute
-			top: 13px
-			left: 16px
-			width: 16px
-			height: 16px
-			+s(phone-pic-small) 
-		&:hover
-			text-decoration: underline
-.phone
-	display: inline-block
-	width: 272px
+			background: #d0d5e0 
+
+.header
+	margin-bottom: 35px
 	font:
-		size: 13px
-	text-align: right  	
-	.phone__text
-		color: #cccccc 		
-	.phone__number
-		color: #012c77 
-		font: 
-			size: 22px
-			weight: bold
-.nav
-	padding-left: 14px 		
-	li
+		size: 0
+	background: #edeff3		
+	&__row
 		display: inline-block
-		margin-left: 27px
+		padding-left: 28px 
 		vertical-align: top 
-		a
-			display: block
-			color: #012c77 
-			font-size: 13px
-			letter-spacing: 1px 
-			text-transform: uppercase 
-			text-decoration: none 
-			&:hover
-				background: #ccc 
-		.is-active
-			color: #000
-			text-decoration: underline 
-			&:hover
-				background: #edeff3
-	li:first-child
-		margin-left: 0	
-			
-.header__tabs
-	font-size: 0
-	.tab
+		line-height: 70px 		
+		&_border-bottom
+			border-bottom: 1px solid #ccc  
+	&__work-time
+		@extend: .work-time
+		width: 186px
+		margin-right: 50px 
+	&__time-work
+		@extend: .time-work								
+	&__callback
+		display: inline-block
+		margin-right: 45px 
+		background: #fff			
+	&__nav
+		padding-left: 14px 		
+		li
+			display: inline-block
+			margin-left: 27px
+			vertical-align: top 
+			a
+				display: block
+				color: #012c77 
+				font-size: 13px
+				letter-spacing: 1px 
+				text-transform: uppercase 
+				text-decoration: none 
+				&:hover
+					background: #ccc 
+			.is-active
+				color: #000
+				text-decoration: underline 
+				&:hover
+					background: #edeff3
+		li:first-child
+			margin-left: 0	
+	&__nav-tab
 		display: inline-block
 		width: 326px
 		text-align: center 
@@ -139,7 +102,7 @@
 			border-bottom: 2px solid #0f4b7d
 			span
 				position: relative
-	.tab1
+	&__nav-tab_1
 		background: #012c77
 		span:after
 			content: ""
@@ -148,7 +111,7 @@
 			left: 107px
 			border: 5px solid transparent
 			border-left: 5px solid #fff	 
-	.tab2
+	&__nav-tab_2
 		background: #0c419e
 		span:after
 			content: ""
@@ -157,7 +120,7 @@
 			left: 99px
 			border: 5px solid transparent
 			border-left: 5px solid #fff	 		 
-	.tab3
+	&__nav-tab_3
 		background: #1165ab 
 		span:after
 			content: ""
@@ -165,10 +128,52 @@
 			top: 11px
 			left: 134px
 			border: 5px solid transparent
-			border-left: 5px solid #fff	 		
+			border-left: 5px solid #fff			
 			
+.callback-btn
+	display: block
+	position: relative
+	padding-right: 16px
+	padding-left: 41px 
+	color: #1165ab 
+	font: 
+		size: 13px
+		weight: bold  
+	text-transform: uppercase
+	text-decoration: none 
+	letter-spacing: 1px 
+	line-height: 42px 
+	background: inherit
+	-webkit-border-radius: 3px 
+		border-radius: 3px 
+	-webkit-box-shadow: 0 2px 3px 1px #88a9e2 
+		box-shadow: 0 2px 3px 1px #88a9e2 			
+	&:before
+		content: ""
+		position: absolute
+		top: 13px
+		left: 16px
+		width: 16px
+		height: 16px
+		+s(phone-pic-small) 
+	&:hover
+		text-decoration: underline
+.phone
+	display: inline-block
+	width: 272px
+	font:
+		size: 13px
+	text-align: right  	
+	&__text
+		color: #cccccc 		
+	&__number
+		color: #012c77 
+		font: 
+			size: 22px
+			weight: bold
+ 					
 //MAIN
-.bread-crumb-wrap
+.bread-crumb
 	width: 100%  
 	margin-bottom: 10px 
 	-ms-word-wrap: break-word 
@@ -179,53 +184,56 @@
 		a
 			color: #7482a7
 			text-decoration: none   
-.bread-crumb__slash
-	color: #e7e7e7
+	&__slash
+		color: #e7e7e7
 	
 .h2
 	font: 
 		size: 42px
 		weight: bold 
 	margin-bottom: 23px 
-	.date-of-news
-		vertical-align: middle
-		font: 
-			size: 15px
-			weight: normal 
-		color: #737373 
+	
+.date-of-news
+	vertical-align: middle
+	font: 
+		size: 15px
+		weight: normal 
+	color: #737373 
 
-.news-cols
+.news-item
 	padding-top: 42px
 	padding-bottom: 68px  
 	border-top: 1px solid #ccc 
 	border-bottom: 1px solid #ccc 
 	+clr
-.l-col
-	display: inline-block
-	vertical-align: top 
-	&_small
+	&__picture
+		display: inline-block
+		vertical-align: top
 		width: 31%
 		margin-right: calc(2% - 4px)
-	&_big
+	&__content
+		display: inline-block
+		vertical-align: top	
 		width: 67%
-.img-wrap
+
+.news-picture
 	overflow: hidden 
-	.news-img
+	&__inner
 		margin-top: -42px 
 		margin-right: -20px 
 		margin-bottom: -52px 
 		margin-left: -25px  
 
-.news-description
-	.news-description__title
+.news-content
+	&__title
 		margin-bottom: 28px 
 		font-size: 18px
 		line-height: 28px
-	.news-description__text
+	&__text
 		margin-bottom: 42px 
 		font-size: 15px 
 		line-height: 24px 
-	.h3
+	&__h3
 		margin-bottom: 29px
 		font-size: 24px 
 		line-height: 32px 
@@ -246,22 +254,22 @@
 			background: #0c419e
 	li:last-child
 		margin-bottom: 45px 
-	.goto-all-news
-		font:
-			size: 15px 
-			weight: bold
-		line-height: 28px 
-		color: #0c419e
-		text-decoration: none 
+.all-news
+	font:
+		size: 15px 
+		weight: bold
+	line-height: 28px 
+	color: #0c419e
+	text-decoration: none 
 		
 //FOOTER
-
-.footer__bg-grey
-	background: #edeff3 
-.footer__nav
-	padding: 30px 0
-	border-bottom: 1px solid #ccc
-	.nav-wrap
+.footer
+	&__bg-grey
+		background: #edeff3 
+	&__nav
+		padding: 30px 0
+		border-bottom: 1px solid #ccc
+	&__nav-inner
 		display: inline-block
 		width: 20% 
 		vertical-align: top
@@ -278,36 +286,25 @@
 					font-weight: bold 
 			&:hover
 				text-decoration: underline
-	.nav-wrap:last-child
-		margin-right: 0
-.footer__contact
-	padding: 30px 0
-	background: #edeff3 
-	.text-logo
-		display: inline-block
-		width: 120px
-		margin-right: 70px 
-		margin-top: 25px 
-		vertical-align: top
-	p
-		font-size: 28px 
-		line-height: 16px 
-		color: #bec2d5 
-		span
-			font-size: 12px 
-	.phone
+	&__nav-inner:last-child
+		margin-right: 0	
+	&__contact
+		padding: 30px 0
+		background: #edeff3 
+	&__phone
 		display: inline-block
 		width: 386px
 		position: relative
 		padding-left: 55px 
 		vertical-align: top
 		text-align: left 
-		&__text
-			font-size: 15px
-			color: #737373 
-		&__number
-			font-size: 48px 
-			line-height: 46px 
+	&__phone-text
+		font-size: 15px
+		color: #737373 
+	&__phone-number
+		font-size: 48px 
+		color: #012c77 
+		line-height: 46px 
 		&:before
 			content: ""
 			position: absolute
@@ -316,43 +313,38 @@
 			width: 36px
 			height: 36px
 			+s(phone-pic-big)
-	.footer__work-time
+	&__work-time
 		float: right
 		margin: 0 
 		margin-top: 35px 
-	.footer__time-work
-		display: inline-block
-		margin-right: 15px 
-		color: #cccccc 
-		font-size: 13px
-		list-height: 46px
-	ul
-		display: inline-block
-		font-size: 0
-		list-style: none 
-		li
-			display: inline-block
-			width: 11px
-			height: 11px 
-			margin-right: 4px  
-			background: #012c77 
-			-webkit-border-radius: 50% 
-			border-radius: 50% 				
-		li:last-child
-			margin-right: 0					
-		.inactive
-			background: #d0d5e0 								
-.footer__adress
-	margin-top: 35px 
-	margin-bottom: 27px 
-.footer__copyright
+		&__time-work
+			@extend: .time-work
+	&__adress
+		margin-top: 35px 
+		margin-bottom: 27px
+
+.text-logo
+	display: inline-block
+	width: 120px
+	margin-right: 70px 
+	margin-top: 25px 
+	vertical-align: top
+	p
+		font-size: 28px 
+		line-height: 16px 
+		color: #bec2d5 
+		span
+			font-size: 12px 	
+ 
+.copyright
 	display: inline-block
 	width: 230px 
 	margin-right: 18px 
 	vertical-align: top
 	font-size: 15px  
 	color: #ccc 
-.footer__adress_text
+	
+.adress-text
 	display: inline-block
 	width: 330px 
 	margin-right: 215px 
@@ -368,6 +360,7 @@
 			margin-right: 10px
 	li:first-child
 		margin-left: 0 
+		
 .web-dev-name
 	display: inline-block
 	width: 180px 
