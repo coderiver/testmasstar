@@ -38,18 +38,16 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
 .logo { height: 142px; float: left; padding-top: 20px; }
 
 .work-time { display: inline-block; width: 100px; margin-right: 50px; }
-
-.time-work span { display: inline-block; margin-right: 15px; color: #cccccc; font-size: 13px; list-height: 46px; }
-.time-work ul { display: inline-block; }
-.time-work ul li { display: inline-block; width: 11px; height: 11px; margin-right: 4px; background: #012c77; -webkit-border-radius: 50%; border-radius: 50%; }
-.time-work ul li:last-child { margin-right: 0; }
-.time-work ul .inactive { background: #d0d5e0; }
+.work-time__time span { display: inline-block; margin-right: 15px; color: #cccccc; font-size: 13px; list-height: 46px; }
+.work-time__time ul { display: inline-block; }
+.work-time__time ul li { display: inline-block; width: 11px; height: 11px; margin-right: 4px; background: #012c77; -webkit-border-radius: 50%; border-radius: 50%; }
+.work-time__time ul li:last-child { margin-right: 0; }
+.work-time__time ul .inactive { background: #d0d5e0; }
 
 .header { margin-bottom: 35px; font-size: 0; background: #edeff3; }
 .header__row { display: inline-block; padding-left: 28px; vertical-align: top; line-height: 70px; }
 .header__row_border-bottom { border-bottom: 1px solid #ccc; }
 .header__work-time { @extend: .work-time; width: 186px; margin-right: 50px; }
-.header__time-work { @extend: .time-work; }
 .header__callback { display: inline-block; margin-right: 45px; background: #fff; }
 .header__nav { padding-left: 14px; }
 .header__nav li { display: inline-block; margin-left: 27px; vertical-align: top; }
@@ -116,8 +114,7 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
 .footer__phone-text { font-size: 15px; color: #737373; }
 .footer__phone-number { font-size: 48px; color: #012c77; line-height: 46px; }
 .footer__phone-number:before { content: ""; position: absolute; top: 30px; left: 0; width: 36px; height: 36px; background: url('../img/icons-sb6c313b638.png') 0 -41px no-repeat; width: 36px; height: 36px; }
-.footer__work-time { float: right; margin: 0; margin-top: 35px; }
-.footer__work-time__time-work { @extend: .time-work; }
+.footer__work-time { float: right; width: 186px; margin: 0; margin-top: 35px; font-size: 0; }
 .footer__adress { margin-top: 35px; margin-bottom: 27px; }
 
 .text-logo { display: inline-block; width: 120px; margin-right: 70px; margin-top: 25px; vertical-align: top; }
